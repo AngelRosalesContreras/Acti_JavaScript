@@ -6,7 +6,7 @@ class Aplicacion {
     this.regaloAbierto = this.regaloAbierto.bind(this);
     this.regalos = [];
     this.cargarContenedorRegalo();
-    this.regaloAbiertos = 0;
+    this.regalosAbiertos = 0;
   }
   cargarContenedorRegalo() {
     for (const enlace of REGALOS_ENLACES) {
@@ -14,11 +14,11 @@ class Aplicacion {
       this.regalos.push(regalo);
     }
   }
-}
 
-regaloAbierto(){
-  this.regaloAbiertos++;
-  if(this.regaloAbiertos  === this.regalos.length){
-    this.contenedorTitulo.textContent = 'Disfruta tus regalos';
+  regaloAbierto(){
+    this.regalosAbiertos++;
+    if(this.regalosAbiertos  === this.regalos.length){
+      this.contenedorTitulo.textContent = 'Disfruta tus regalos';
+    }
   }
 }
